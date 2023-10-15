@@ -1,5 +1,7 @@
 const { ApolloServer } = require('apollo-server');
 const mongoose = require('mongoose');
+const consume = require("./kafka/consumer")
+
 
 const MONGODB = "mongodb://localhost:27017/admin"
 
@@ -24,3 +26,8 @@ mongoose.connect(MONGODB, {useNewUrlParser: true})
   }).then((res) => {
     console.log(`Server Running at ${res.url}`)
   });
+
+ // start the consumer, and log any errors
+consume().catch((err) => {
+	console.error("error in consumer: ", err)
+})
