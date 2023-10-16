@@ -2,12 +2,19 @@ const { gql } = require('apollo-server')
 
 module.exports = gql`
 type Pregunta {
-    enunciado: String
+    nombre_pregunta: String
+    tema: String
+    opciones: [Opciones]
+}
+
+type Opciones {
+    nombre_opcion: String
+    correcta: Boolean 
 }
 
 type Query {
 
     pregunta(ID: ID!): Pregunta!
-    getPreguntas(tipo: String): [Pregunta]
+    getPreguntas(tema: String): [Pregunta]
 }
 `
