@@ -1,8 +1,15 @@
 # apollo-server-mongo-read
+## Overview
+
+Este proyecto tiene como finalidad consumir desde el tópico `my-topic` de Kafka una nueva pregunta, y escribirla en la colección `preguntas` de MongoDB.
+
+## Pasos Para Ejecutar 
 
 1. correr npm start
 2. ingresar a http://localhost:5000/ para correr queries sobre el schema Pregunta
 3. se debe crear una colección `preguntas` sobre la bd mongo `admin`, que manejará el siguiente schema
+
+## Información Adicional 
 
 ```javascript
 
