@@ -6,9 +6,8 @@ module.exports = {
         async pregunta(_, {ID}) {
             return await Pregunta.findById(ID)
         }, 
-        async getPreguntas(_, {tipo}) {
-            return await Pregunta.find({ tipo: tipo }) 
-           
+        async getPreguntas(_, {tema}) {
+            return await Pregunta.find({ tema: tema }) 
         }
     }
 }
