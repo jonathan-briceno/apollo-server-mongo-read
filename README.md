@@ -8,6 +8,7 @@ Este proyecto tiene como finalidad consumir desde el tópico `my-topic` de Kafka
 1. correr npm start
 2. ingresar a http://localhost:5000/ para correr queries sobre el schema Pregunta
 3. se debe crear una colección `preguntas` sobre la bd mongo `admin`, que manejará el siguiente schema
+4. La UI de Kafka (Kafdrop) puede consultarse en http://localhost:9000/
 
 ## Información Adicional 
 
