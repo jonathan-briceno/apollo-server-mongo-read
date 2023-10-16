@@ -1,7 +1,11 @@
-const { model, Schema} = require('mongoose');
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const preguntaSchema = new Schema({
-    enunciado: String
+const pregunta = new Schema({
+    enunciado: String, 
+    tipo: String
 });
 
-module.exports = model('Pregunta', preguntaSchema);
+const model = mongoose.model('preguntas', pregunta);
+
+module.exports = model;

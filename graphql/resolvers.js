@@ -6,12 +6,9 @@ module.exports = {
         async pregunta(_, {ID}) {
             return await Pregunta.findById(ID)
         }, 
-        async getPreguntas(_, {amount}) {
-            return await Pregunta.find().sort( {createdAt: -1} ).limit(amount)
+        async getPreguntas(_, {tipo}) {
+            return await Pregunta.find({ tipo: tipo }) 
+           
         }
     }
-
-
-
-
 }

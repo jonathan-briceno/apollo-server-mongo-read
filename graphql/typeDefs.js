@@ -8,6 +8,6 @@ type Pregunta {
 type Query {
 
     pregunta(ID: ID!): Pregunta!
-    getPreguntas(amount: Int): [Pregunta]
+    getPreguntas(tipo: String): [Pregunta]
 }
 `
